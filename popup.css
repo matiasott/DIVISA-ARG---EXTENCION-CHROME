@@ -1,0 +1,40 @@
+body {
+  width: 300px;
+  height: 500px;
+  padding: 10px;
+  background-color: #212529;
+  color: #ffffff;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 2rem; /* Se redujo el espacio superior */
+}
+
+h1 {
+  color: #ffc107;
+}
+
+h3 {
+  color: #ffc107;
+  margin-top: 1rem; /* Se redujo el espacio superior */
+}
+
+.card {
+  background-color: #343a40;
+  padding: 0.75rem; /* Se redujo el padding */
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  color: #c49404;
+  margin-bottom: 0.25rem; /* Se redujo el espacio inferior */
+}
+
+.card-value {
+  color: #17a2b8;
+  font-weight: bold;
+  text-align: right;
+  margin-bottom: 0.25rem; /* Se redujo el espacio inferior */
+}

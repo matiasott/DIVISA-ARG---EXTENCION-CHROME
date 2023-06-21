@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dólar ARG</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="popup.css"> <!-- Vínculo al archivo popup.css -->
+</head>
+<body>
+    <div class="container mt-4">
+        <img src="./img/bandera-png.webp" alt="Bandera" style="position: fixed; top: 5px; right: 5px; width: 50px; height: auto;">
+
+
+      <h1>Dólar Argentina</h1>
+  
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <h3 class="card-title">Dólar Blue</h3>
+            <p class="card-value">Valor de compra: <span id="blue-compra"></span></p>
+            <p class="card-value">Valor de venta: <span id="blue-venta"></span></p>
+          </div>
+        </div>
+  
+        <div class="col-md-4">
+          <div class="card">
+            <h3 class="card-title">Dólar Oficial</h3>
+            <p class="card-value">Valor de compra: <span id="oficial-compra"></span></p>
+            <p class="card-value">Valor de venta: <span id="oficial-venta"></span></p>
+          </div>
+        </div>
+  
+        <div class="col-md-4">
+          <div class="card">
+            <h3 class="card-title">Dólar MEP</h3>
+            <p class="card-value">Valor de compra: <span id="bolsa-compra"></span></p>
+            <p class="card-value">Valor de venta: <span id="bolsa-venta"></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/js/bootstrap.bundle.min.js"></script>
+    <script src="popup.js"></script>
+  </body>
+  </html>
