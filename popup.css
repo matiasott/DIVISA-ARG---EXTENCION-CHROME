@@ -13,12 +13,12 @@ body {
 }
 
 h1 {
-  color: #ffc107;
+  color: #72BD39;
 }
 
 h3 {
   color: #ffc107;
-  margin-top: 1rem; /* Se redujo el espacio superior */
+  margin-top: 0.25rem; /* Se redujo el espacio superior */
 }
 
 .card {
@@ -28,7 +28,7 @@ h3 {
 }
 
 .card-title {
-  color: #c49404;
+  color: #72BD39;
   margin-bottom: 0.25rem; /* Se redujo el espacio inferior */
 }
 
@@ -37,4 +37,9 @@ h3 {
   font-weight: bold;
   text-align: right;
   margin-bottom: 0.25rem; /* Se redujo el espacio inferior */
+}
+
+.valor{
+  color: rgb(209, 118, 0);
+  display: inline;
 }

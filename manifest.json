@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Divisas Arg.",
   "version": "1.0",
-  "description": "Una extensión de Chrome para los cambios de Dolas de Argentina.",
+  "description": "Una extensión de Chrome que actuaiza en tiempo real a los precios del Dolar de Argentina.",
   "permissions": [
     "storage",
     "downloads"
