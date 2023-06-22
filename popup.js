@@ -1,3 +1,8 @@
+// ------------------------------------------------------------------------
+// Se esta haciendo uso de la Api que se encuentra publicada en esta pagina
+// https://dolar-api-argentina.vercel.app
+// ------------------------------------------------------------------------
+
 function obtenerDolar(api, tipo) {
     var url = api + tipo;
     fetch(url)
