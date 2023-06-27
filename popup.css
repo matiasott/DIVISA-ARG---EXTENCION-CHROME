@@ -33,6 +33,7 @@ h3 {
   color: #160a6e;
   margin-bottom: -1rem; /* Se redujo el espacio inferior */
   font-size: 1rem; /* Se redujo el tamaño de fuente */
+  margin-left: 25px;
 }
 
 .card-value {
@@ -106,3 +107,9 @@ h3 {
   background-color: #0000FF;
   color: #ffffff;
 }
+
+.bandera{
+  width: 20px;
+  position: fixed;
+}
+
