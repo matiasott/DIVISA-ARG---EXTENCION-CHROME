@@ -56,6 +56,13 @@ function obtenerDatosAPI() {
 // Llamar a la función para obtener los datos y actualizar el HTML
 obtenerDatosAPI();
 
+
+
+// ------------------------------------------------------------------------
+// esta funcion arma la grafica de acuerdo al crecimiento del dolar y escoje el color
+//-------------------------------------------------------------------------
+
+
 function generarGraficoDolar(id, lista) {
     let valoresDolar = lista.reverse();
     const canvas = document.getElementById(id); // Obtener el elemento del canvas
@@ -109,6 +116,12 @@ function generarGraficoDolar(id, lista) {
     }
 }
 
+
+// ------------------------------------------------------------------------
+// esta funcion obtiene los valores de promedios para hacer una grafica posterioermente
+// ------------------------------------------------------------------------
+
+
 async function obtenerPromedios(dias) {
     const url = 'https://api.bluelytics.com.ar/v2/evolution.json';
 
@@ -131,6 +144,11 @@ async function obtenerPromedios(dias) {
         return null;
     }
 }
+
+// ------------------------------------------------------------------------
+// esta funcion es la llamada cuando se apretan los botones de intervalos para ver las graficas
+
+// ------------------------------------------------------------------------
 
 let diasgraficos = 7; // Valor inicial
 
@@ -165,13 +183,19 @@ function cambiarDias(valor) {
     });
 }
 
-// Ejemplo de uso
+// ------------------------------------------------------------------------
+// aca se llama a la fucnion por primera vez
+// ------------------------------------------------------------------------
 obtenerPromedios(diasgraficos).then(result => {
     if (result) {
         generarGraficoDolar("oficial-grafico", result.promediosOficial)
         generarGraficoDolar("blu-grafico", result.promediosBlue)
     }
 });
+
+// ------------------------------------------------------------------------
+// escucha los eventos de click de los botones para ver las graficas con dierentes intervalos
+// ------------------------------------------------------------------------
 
 
 document.getElementById("button1").addEventListener("click", function () {
