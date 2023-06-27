@@ -17,38 +17,96 @@
 
 
         <h1>Dólar Argentina</h1>
+        <div class="nav-container">
+            <button id="button1" class="button">1s</button>
+            <button id="button2" class="button">1m</button>
+            <button id="button3" class="button">3m</button>
+            <button id="button4" class="button">6m</button>
+            <button id="button5" class="button">1a</button>
+        </div>
+
 
         <div class="row">
+
             <div class="col-md-4">
                 <div class="card">
-                    <h3 class="card-title">Dólar Blue</h3>
-                    <p class="card-value">Compra: <span id="blue-compra"></span></p>
-                    <p class="card-value">Venta: <span id="blue-venta"></span></p>
+                    <h3 class="card-title">Dólar Oficial</h3>
+                    <div class="card-content">
+                        <canvas class="grafico" id="oficial-grafico"></canvas>
+                        <div class="card-values">
+                            <p class="card-value">Compra: <span id="oficial-compra"></span></p>
+                            <p class="card-value">Venta: <span id="oficial-venta"></span></p>
+                            <p class="card-value"><span class="promedio">Promedio:</span> <span
+                                    id="oficial-promedio"></span></p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-
+            <div class="col-md-4">
+                <div class="card">
+                    <h3 class="card-title">Dólar Blue</h3>
+                    <div class="card-content">
+                        <canvas class="grafico" id="blu-grafico"></canvas>
+                        <div class="card-values">
+                            <p class="card-value">Compra: <span id="blue-compra"></span></p>
+                            <p class="card-value">Venta: <span id="blue-venta"></span></p>
+                            <p class="card-value"><span class="promedio">Promedio:</span> <span
+                                    id="blue-promedio"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="col-md-4">
                 <div class="card">
                     <h3 class="card-title">Dólar MEP</h3>
-                    <p class="card-value">Compra: <span id="bolsa-compra"></span></p>
-                    <p class="card-value">Venta: <span id="bolsa-venta"></span></p>
+                    <div class="card-content">
+                        <canvas class="grafico" id="bolsa-grafico"></canvas>
+                        <div class="card-values">
+                            <p class="card-value">Compra: <span id="bolsa-compra"></span></p>
+                            <p class="card-value">Venta: <span id="bolsa-venta"></span></p>
+                            <p class="card-value"><span class="promedio">Promedio:</span> <span
+                                    id="bolsa-promedio"></span></p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
 
-
-        <div class="col-md-4">
-            <div class="card">
-                <h3 class="card-title">Dólar Oficial</h3>
-                <p class="card-value">Compra: <span id="oficial-compra"></span></p>
-                <p class="card-value">Venta: <span id="oficial-venta"></span></p>
+            <div class="col-md-4">
+                <div class="card">
+                    <h3 class="card-title">Euro Oficial</h3>
+                    <div class="card-content">
+                        <canvas class="grafico" id="euroOficial-grafico"></canvas>
+                        <div class="card-values">
+                            <p class="card-value">Compra: <span id="oficial_euro-compra"></span></p>
+                            <p class="card-value">Venta: <span id="oficial_euro-venta"></span></p>
+                            <p class="card-value"><span class="promedio">Promedio:</span> <span
+                                    id="oficial_euro-promedio"></span></p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
 
-    <script src="popup.js"></script>
+            <div class="col-md-4">
+                <div class="card">
+                    <h3 class="card-title">Euro Blue</h3>
+                    <div class="card-content">
+                        <canvas class="grafico" id="EuroBlue-grafico"></canvas>
+                        <div class="card-values">
+                            <p class="card-value">Compra: <span id="blue_euro-compra"></span></p>
+                            <p class="card-value">Venta: <span id="blue_euro-venta"></span></p>
+                            <p class="card-value"><span class="promedio">Promedio:</span> <span
+                                    id="blue_euro-promedio"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <script src="popup.js"></script>
 </body>
 
 </html>

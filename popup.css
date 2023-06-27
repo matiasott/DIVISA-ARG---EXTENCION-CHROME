@@ -13,23 +13,26 @@ body {
 }
 
 h1 {
-  color: #72BD39;
+  color: #ffffff;
+  font-size: 1.5rem; /* Se redujo el tamaño de fuente */
 }
 
 h3 {
   color: #ffc107;
   margin-top: 0.25rem; /* Se redujo el espacio superior */
+  font-size: 1rem; /* Se redujo el tamaño de fuente */
 }
 
 .card {
-  background-color: #343a40;
-  padding: 0.75rem; /* Se redujo el padding */
-  margin-bottom: 1rem;
+  background-color: #ffffff;
+  padding: 0.5rem; /* Se redujo el padding */
+  margin-bottom: 0.5rem; /* Se redujo el espacio inferior */
 }
 
 .card-title {
-  color: #72BD39;
-  margin-bottom: 0.25rem; /* Se redujo el espacio inferior */
+  color: #160a6e;
+  margin-bottom: -1rem; /* Se redujo el espacio inferior */
+  font-size: 1rem; /* Se redujo el tamaño de fuente */
 }
 
 .card-value {
@@ -37,9 +40,69 @@ h3 {
   font-weight: bold;
   text-align: right;
   margin-bottom: 0.25rem; /* Se redujo el espacio inferior */
+  font-size: 0.8rem; /* Se redujo el tamaño de fuente */
 }
 
-.valor{
+.valor {
   color: rgb(209, 118, 0);
   display: inline;
+  font-size: 0.8rem; /* Se redujo el tamaño de fuente */
+}
+
+.currency {
+  font-size: 0.6em;
+}
+
+.valorP {
+  color: green;
+  display: inline;
+  font-size: 0.8rem; /* Se redujo el tamaño de fuente */
+}
+
+.promedio {
+  color: #0000FF; /* Código hexadecimal para azul */
+  font-weight: bold;
+  font-size: 0.8rem; /* Se redujo el tamaño de fuente */
+}
+
+
+
+.card-content {
+  display: flex;
+}
+
+.grafico {
+  order: 1;
+  width: 100px;
+  margin-top: 20px;
+}
+
+.card-values {
+  order: 2;
+  margin-left: 10px;
+}
+
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.button {
+  flex-grow: 1;
+  background-color: #ffffff;
+  color: #160a6e;
+  margin-right: 0.5rem;
+  border: none;
+  font-size: 0.8rem;
+}
+
+.button:last-child {
+  margin-right: 0;
+}
+
+.button:hover {
+  background-color: #0000FF;
+  color: #ffffff;
 }
