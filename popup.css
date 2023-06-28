@@ -1,6 +1,6 @@
 body {
   width: 300px;
-  height: 500px;
+  height: 550px;
   padding: 10px;
   background-color: #212529;
   color: #ffffff;
@@ -104,7 +104,7 @@ h3 {
 }
 
 .button:hover {
-  background-color: #0000FF;
+  background-color: #71A6D8;
   color: #ffffff;
 }
 
@@ -115,7 +115,7 @@ h3 {
 
 #calculadora {
   position: fixed;
-  top: 53%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 20px;
@@ -174,4 +174,14 @@ h2{
 #resultado{
   color: #2d8ce6;
   font-size: 14px;
+}
+
+#resultado2{
+  color: #2d8ce6;
+  font-size: 14px;
+}
+
+.nav{
+  margin-top: 0px;
+  margin-bottom: 0px;
 }

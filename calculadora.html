@@ -1,38 +1,73 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Calculadora de equivalencia</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="popup.css"> <!-- Vínculo al archivo popup.css -->
 </head>
+
 <body>
     <div id="calculadora">
         <h2>Calculadora</h2>
-        <label for="tipo">Tipo de cambio:</label>
-        <select id="tipo">
-            <option value="Dólar Oficial">Dólar Oficial</option>
-            <option value="Dólar Blue">Dólar Blue</option>
-            <option value="Dólar MEP">Dólar MEP</option>
-            <option value="Euro Oficial">Euro Oficial</option>
-            <option value="Euro Blue">Euro Blue</option>
-            <option value="Peso Argentino">Peso Argentino</option>
-        </select>
-        <br>
-        <label for="cantidad">Cantidad en AR$:</label>
-        <input type="text" id="cantidad">
-        <br>
-        <label for="opcion">Tipo de Precio:</label>
-        <select id="opcion">
-            <option value="compra">Compra</option>
-            <option value="venta">Venta</option>
-            <option value="promedio">Promedio</option>
-        </select>
-        <br>
-        <button class="btn btn-primary" id="botonCalcular">Calcular</button>
-        <br>
-        <p id="resultado"></p>
-        
+        <div class="nav-container">
+            <button id="buttonAR" class="button">AR$ a Divisas</button>
+            <button id="buttonUS" class="button">Divisa a AR$</button>
+        </div>
+        <div id="casillaAR" style="display:block;">
+            <label for="cantidad">Cantidad en AR$:</label>
+            <input type="text" id="cantidad">
+            <br>
+            <label for="tipo">Convertir a:</label>
+            <select id="tipo">
+                <option value="Dólar Oficial">Dólar Oficial</option>
+                <option value="Dólar Blue">Dólar Blue</option>
+                <option value="Dólar MEP">Dólar MEP</option>
+                <option value="Euro Oficial">Euro Oficial</option>
+                <option value="Euro Blue">Euro Blue</option>
+            </select>
+            <br>
+
+            <label for="opcion">Usando el valor Precio de:</label>
+            <select id="opcion">
+                <option value="compra">Compra</option>
+                <option value="venta">Venta</option>
+                <option value="promedio">Promedio</option>
+            </select>
+            <br>
+            <button class="btn btn-primary" id="botonCalcular">Calcular</button>
+            <br>
+            <p id="resultado"></p>
+
+        </div>
+
+
+
+        <div id="casillaUS" style="display:none;">
+            <label for="cantidad2">Cantidad:</label>
+            <input type="text" id="cantidad2">
+            <br>
+            <label for="tipo2">Tipo de la divisa:</label>
+            <select id="tipo2">
+                <option value="Dólar Oficial">Dólar Oficial</option>
+                <option value="Dólar Blue">Dólar Blue</option>
+                <option value="Dólar MEP">Dólar MEP</option>
+                <option value="Euro Oficial">Euro Oficial</option>
+                <option value="Euro Blue">Euro Blue</option>
+            </select>
+            <br>
+            <label for="opcion2">Tipo de Precio:</label>
+            <select id="opcion2">
+                <option value="compra">Compra</option>
+                <option value="venta">Venta</option>
+                <option value="promedio">Promedio</option>
+            </select>
+            <br>
+            <button class="btn btn-primary" id="botonCalcular2">Calcular</button>
+            <br>
+            <p id="resultado2"></p>
+        </div>
     </div>
     <div class="salir">
         <a href="./popup.html" class="btn btn-primary">Volver</a>
@@ -40,4 +75,5 @@
     <script src="calculadora.js"></script>
 </body>
 </body>
+
 </html>
