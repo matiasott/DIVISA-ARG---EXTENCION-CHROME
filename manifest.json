@@ -5,7 +5,8 @@
   "description": "Una extensión de Chrome que actuaiza en tiempo real a los precios de las divisas de Argentina.",
   "permissions": [
     "storage",
-    "downloads"
+    "downloads",
+    "scripting"
   ],
   "action": {
     "default_popup": "popup.html",

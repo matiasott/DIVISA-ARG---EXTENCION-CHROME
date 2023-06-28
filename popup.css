@@ -113,3 +113,65 @@ h3 {
   position: fixed;
 }
 
+#calculadora {
+  position: fixed;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #71A6D8;
+
+}
+
+#calculadora input[type="text"],
+#calculadora select {
+  margin-bottom: 10px;
+}
+
+#calculadora button {
+  display: block;
+  margin-top: 10px;
+}
+
+#calculadora-text {
+  position: fixed;
+  top: 7px;
+  left: 40px;
+  font-size: 20px;
+  color: #71A6D8;
+  display: flex;
+}
+
+select{
+  background-color: #85a9ca;
+}
+
+input{
+  background-color: #85a9ca;
+}
+
+.salir .btn {
+  background-color: #71A6D8;
+  border-color: #000000;
+  color: #ffffff;
+}
+
+label{
+  color: #71A6D8;
+}
+
+h2{
+  color: #71A6D8;
+}
+
+#botonCalcular{
+  background-color: #71A6D8;
+  border-color: #000000;
+  color: #ffffff;
+}
+
+#resultado{
+  color: #2d8ce6;
+  font-size: 14px;
+}

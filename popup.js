@@ -13,6 +13,7 @@ function obtenerDolar(api, tipo) {
             var promedio = (data.venta + data.compra) / 2
             promedio = promedio.toFixed(2);
             document.getElementById(tipo.split('/').pop() + "-promedio").innerHTML = '<p class = "valorP">$<span class="currency">AR</span> ' + promedio + '</p>';
+            generarDiccionario(tipo, data.compra, data.venta, promedio)
         })
         .catch(error => {
             console.error('Error:', error);
@@ -44,9 +45,13 @@ function obtenerDatosAPI() {
             document.getElementById('oficial_euro-venta').innerHTML = '<p class="valor">$<span class="currency">AR</span> ' + oficialEuro.value_sell + '</p>';
             document.getElementById('oficial_euro-promedio').innerHTML = '<p class="valorP">$<span class="currency">AR</span> ' + oficialEuro.value_avg + '</p>';
 
+            generarDiccionario("Euro Oficial", oficialEuro.value_buy, oficialEuro.value_sell, oficialEuro.value_avg)
+
             document.getElementById('blue_euro-compra').innerHTML = '<p class="valor">$<span class="currency">AR</span> ' + blueEuro.value_buy + '</p>';
             document.getElementById('blue_euro-venta').innerHTML = '<p class="valor">$<span class="currency">AR</span> ' + blueEuro.value_sell + '</p>';
             document.getElementById('blue_euro-promedio').innerHTML = '<p class="valorP">$<span class="currency">AR</span> ' + blueEuro.value_avg + '</p>';
+
+            generarDiccionario("Euro Blue", blueEuro.value_buy, blueEuro.value_sell, blueEuro.value_avg)
         })
         .catch(error => {
             console.log('Error al obtener los datos de la API:', error);
@@ -154,7 +159,6 @@ let diasgraficos = 7; // Valor inicial
 
 function cambiarDias(valor) {
 
-    console.log("entre")
     switch (valor) {
         case '1s':
             diasgraficos = 7;
@@ -172,9 +176,6 @@ function cambiarDias(valor) {
             diasgraficos = 365;
             break;
     }
-
-    console.log('Nuevo valor de diasgraficos:', diasgraficos);
-
     obtenerPromedios(diasgraficos).then(result => {
         if (result) {
             generarGraficoDolar("oficial-grafico", result.promediosOficial)
@@ -216,6 +217,51 @@ document.getElementById("button4").addEventListener("click", function () {
 
 document.getElementById("button5").addEventListener("click", function () {
     cambiarDias('1a');
+});
+
+var diccionarioValores = {};
+
+function generarDiccionario(tipo, compra, venta, promedio) {
+
+    switch (tipo) {
+        case '/v1/dolares/blue':
+            tipo = "Dólar Blue";
+            break;
+        case '/v1/dolares/oficial':
+            tipo = "Dólar Oficial";
+            break;
+        case '/v1/dolares/bolsa':
+            tipo = "Dólar MEP";
+            break;
+    }
+
+    diccionarioValores[tipo] = { compra: compra, venta: venta, promedio: promedio };
+
+    if (Object.keys(diccionarioValores).length == 5) {
+        guardarDiccionarioEnStore(diccionarioValores)
+    }
+
+}
+
+function guardarDiccionarioEnStore(diccionario) {
+    localStorage.setItem('diccionarioValores', JSON.stringify(diccionario));
+}
+
+
+function mostrarTexto() {
+    document.getElementById("calculadora-text").style.display = "block";
+}
+
+function ocultarTexto() {
+    document.getElementById("calculadora-text").style.display = "none";
+}
+
+document.getElementById("textocalcu").addEventListener("mouseover", function () {
+    mostrarTexto();
+});
+
+document.getElementById("textocalcu").addEventListener("mouseout", function () {
+    ocultarTexto();
 });
 
 
