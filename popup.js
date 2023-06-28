@@ -8,8 +8,8 @@ function obtenerDolar(api, tipo) {
     fetch(url)
         .then(response => response.json())
         .then(data => {
-            document.getElementById(tipo.split('/').pop() + "-compra").innerHTML = '<p class = "valor">$<span class="currency">AR</span> ' + data.compra + '</p>';
-            document.getElementById(tipo.split('/').pop() + "-venta").innerHTML = '<p class = "valor">$<span class="currency">AR</span> ' + data.venta + '</p>';
+            document.getElementById(tipo.split('/').pop() + "-compra").innerHTML = '<p class = "valor">$<span class="currency">AR</span> ' + data.compra.toFixed(2); + '</p>';
+            document.getElementById(tipo.split('/').pop() + "-venta").innerHTML = '<p class = "valor">$<span class="currency">AR</span> ' + data.venta.toFixed(2); + '</p>';
             var promedio = (data.venta + data.compra) / 2
             promedio = promedio.toFixed(2);
             document.getElementById(tipo.split('/').pop() + "-promedio").innerHTML = '<p class = "valorP">$<span class="currency">AR</span> ' + promedio + '</p>';
@@ -41,15 +41,15 @@ function obtenerDatosAPI() {
             const blueEuro = data.blue_euro;
 
             // Actualizar los valores en el HTML
-            document.getElementById('oficial_euro-compra').innerHTML = '<p class="valor">$<span class="currency">AR</span> ' + oficialEuro.value_buy + '</p>';
-            document.getElementById('oficial_euro-venta').innerHTML = '<p class="valor">$<span class="currency">AR</span> ' + oficialEuro.value_sell + '</p>';
-            document.getElementById('oficial_euro-promedio').innerHTML = '<p class="valorP">$<span class="currency">AR</span> ' + oficialEuro.value_avg + '</p>';
+            document.getElementById('oficial_euro-compra').innerHTML = '<p class="valor">$<span class="currency">AR</span> ' + oficialEuro.value_buy.toFixed(2); + '</p>';
+            document.getElementById('oficial_euro-venta').innerHTML = '<p class="valor">$<span class="currency">AR</span> ' + oficialEuro.value_sell.toFixed(2); + '</p>';
+            document.getElementById('oficial_euro-promedio').innerHTML = '<p class="valorP">$<span class="currency">AR</span> ' + oficialEuro.value_avg.toFixed(2); + '</p>';
 
             generarDiccionario("Euro Oficial", oficialEuro.value_buy, oficialEuro.value_sell, oficialEuro.value_avg)
 
-            document.getElementById('blue_euro-compra').innerHTML = '<p class="valor">$<span class="currency">AR</span> ' + blueEuro.value_buy + '</p>';
-            document.getElementById('blue_euro-venta').innerHTML = '<p class="valor">$<span class="currency">AR</span> ' + blueEuro.value_sell + '</p>';
-            document.getElementById('blue_euro-promedio').innerHTML = '<p class="valorP">$<span class="currency">AR</span> ' + blueEuro.value_avg + '</p>';
+            document.getElementById('blue_euro-compra').innerHTML = '<p class="valor">$<span class="currency">AR</span> ' + blueEuro.value_buy.toFixed(2); + '</p>';
+            document.getElementById('blue_euro-venta').innerHTML = '<p class="valor">$<span class="currency">AR</span> ' + blueEuro.value_sell.toFixed(2); + '</p>';
+            document.getElementById('blue_euro-promedio').innerHTML = '<p class="valorP">$<span class="currency">AR</span> ' + blueEuro.value_avg.toFixed(2); + '</p>';
 
             generarDiccionario("Euro Blue", blueEuro.value_buy, blueEuro.value_sell, blueEuro.value_avg)
         })
@@ -263,6 +263,3 @@ document.getElementById("textocalcu").addEventListener("mouseover", function () 
 document.getElementById("textocalcu").addEventListener("mouseout", function () {
     ocultarTexto();
 });
-
-
-

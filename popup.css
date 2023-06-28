@@ -165,7 +165,13 @@ h2{
   color: #71A6D8;
 }
 
-#botonCalcular{
+#botonCalcular #botonCalcular2{
+  background-color: #71A6D8;
+  border-color: #000000;
+  color: #ffffff;
+}
+
+.btn-primary{
   background-color: #71A6D8;
   border-color: #000000;
   color: #ffffff;
