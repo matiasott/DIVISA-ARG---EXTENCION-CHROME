@@ -130,3 +130,24 @@ function calcularEquivalenciaPeso(tipo,cantidad,opcion) {
 
 
 }
+
+// Obtener todos los botones
+var buttons = document.getElementsByClassName("button");
+
+// Agregar el evento click a cada botón
+for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", function() {
+        changeButton(this.id);
+    });
+}
+
+function changeButton(activeButtonId) {
+    // Recorrer todos los botones y remover la clase "active"
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].classList.remove("active");
+    }
+
+    // Agregar la clase "active" al botón activo
+    var activeButton = document.getElementById(activeButtonId);
+    activeButton.classList.add("active");
+}
