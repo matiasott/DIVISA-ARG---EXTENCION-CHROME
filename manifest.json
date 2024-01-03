@@ -6,7 +6,8 @@
   "permissions": [
     "storage",
     "downloads",
-    "scripting"
+    "scripting",
+    "notifications"
   ],
   "action": {
     "default_popup": "popup.html",

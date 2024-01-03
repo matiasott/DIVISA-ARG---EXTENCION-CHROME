@@ -20,7 +20,7 @@ function obtenerDolar(api, tipo) {
         });
 }
 
-const api = 'https://dolar-api-argentina.vercel.app'
+const api = 'https://dolarapi.com'
 
 // Llamadas a la función obtenerDolar para obtener los valores
 obtenerDolar(api, '/v1/dolares/blue');
